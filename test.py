@@ -2,7 +2,8 @@ from selenium import webdriver
 import time
 
 # create a new Chrome browser instance
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(options=webdriver.ChromeOptions().add_argument('--no-sandbox'))
+
 
 # navigate to the Google account creation page
 browser.get('https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp')
